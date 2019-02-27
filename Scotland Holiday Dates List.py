@@ -31,4 +31,5 @@ for i in range(0, df_scotland_holidays.shape[0]):
     df_holiday_dates = df_holiday_dates[columns]
     # Write to a .csv file
     df_holiday_dates.to_csv('Exported Calendars/holiday_calendar_scotland.csv', mode='a', header=False)
-    print(str(df_sample_holiday[0:1]), ' exported.')
+    print(str(df_sample_holiday[0]), ' exported.')
+print('Job done for Scotland')
