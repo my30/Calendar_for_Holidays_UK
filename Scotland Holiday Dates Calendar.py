@@ -5,9 +5,9 @@ df_scotland_holidays = pd.read_csv('Scotland dim_holidays_uk.csv', sep=',',
                                    names=['id', 'start_date', 'end_date', 'duration'],
                                    parse_dates=['start_date', 'end_date'])
 
-file = open('Scotland dim_holidays_uk Test.csv', mode='w+')
+file = open('holiday_calendar_scotland.csv', mode='w+')
 file.close()
-print('Scotland dim_holidays_uk Test.csv is truncated!')
+print('holiday_calendar_scotland.csv is truncated!')
 
 for i in range(0, df_scotland_holidays.shape[0]):
     # Sample holiday: line 1 -> line i
@@ -31,5 +31,5 @@ for i in range(0, df_scotland_holidays.shape[0]):
     columns = ['id', 'date']
     df_holiday_dates = df_holiday_dates[columns]
     # Write to a .csv file
-    df_holiday_dates.to_csv('Scotland dim_holidays_uk Test.csv', mode='a', header=False)
+    df_holiday_dates.to_csv('holiday_calendar_scotland.csv', mode='a', header=False)
     print(str(df_sample_holiday[0:1]), ' exported.')
