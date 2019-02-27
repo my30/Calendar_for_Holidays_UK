@@ -10,7 +10,7 @@ file.close()
 print('holiday_calendar_wales.csv is truncated! \n')
 
 for i in range(df_wales_holidays.shape[0]):
-    df_holiday = df_wales_holidays.iloc[i, ]
+    df_holiday = df_wales_holidays.iloc[i,]
     # Retrieve values of start_ and end_date
     holiday_start = df_holiday[1]
     holiday_end = df_holiday[2]
