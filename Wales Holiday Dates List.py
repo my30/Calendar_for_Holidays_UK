@@ -27,6 +27,6 @@ for i in range(df_wales_holidays.shape[0]):
     columns = ['id', 'date']
     df_holiday_dates = df_holiday_dates[columns]
     # Write to target .csv file
-    df_holiday_dates.to_csv('Exported Calendars/holiday_calendar_wales.csv', mode='a', header=False)
+    df_holiday_dates.to_csv('Exported Calendars/holiday_calendar_wales.csv', mode='a', header=False, index=False)
     print(str(df_holiday[0]), ' exported.')
 print('Job done for Wales')

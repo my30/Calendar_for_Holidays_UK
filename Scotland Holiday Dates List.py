@@ -11,7 +11,7 @@ file.close()
 print('holiday_calendar_scotland.csv is truncated!')
 
 for i in range(0, df_scotland_holidays.shape[0]):
-    df_sample_holiday = df_scotland_holidays.iloc[i, ]
+    df_sample_holiday = df_scotland_holidays.iloc[i,]
     # Access that row with iloc/loc and specify the column index/column to get int64 or float data.
     # Retrieve the value from series.
     holiday_start = df_sample_holiday[1]
@@ -30,6 +30,6 @@ for i in range(0, df_scotland_holidays.shape[0]):
     columns = ['id', 'date']
     df_holiday_dates = df_holiday_dates[columns]
     # Write to a .csv file
-    df_holiday_dates.to_csv('Exported Calendars/holiday_calendar_scotland.csv', mode='a', header=False)
+    df_holiday_dates.to_csv('Exported Calendars/holiday_calendar_scotland.csv', mode='a', header=False, index=False)
     print(str(df_sample_holiday[0]), ' exported.')
 print('Job done for Scotland')
