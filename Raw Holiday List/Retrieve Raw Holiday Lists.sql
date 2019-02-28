@@ -1,4 +1,4 @@
-SELECT dhu.id, dhu.start_date, dhu.end_date, dhu.duration
+SELECT dhu.id, dhu.start_date, dhu.end_date
 FROM dim_holidays_uk dhu
 WHERE dhu.country = 'Scotland'
 GROUP BY dhu.id;
